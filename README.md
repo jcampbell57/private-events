@@ -1,24 +1,11 @@
-# README
+# Odin Private Events
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a rails app with a PostgreSQL database which allows users to:
+* Create events with a set time and location that can be attended by many users
+* Manage user signups
+* Send invitations
+* Attend many events
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+More project info:
+* Ruby version 3.2.2
+* Link to project description: https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/private-events

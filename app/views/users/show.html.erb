@@ -1,0 +1,5 @@
+<h1> <%= @user.username %>'s Event's </h1>
+
+<ul>
+  <%= render @user.created_events, partial: '/events/event' %>
+</ul>

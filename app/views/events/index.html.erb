@@ -1,12 +1,12 @@
 <h2>Events</h2>
 
-<!---
 <ul>
-  <%#= render @events %>
+  <%= render @events %>
 </ul>
 
-<%#= link_to "New Event", new_event_path %>
---->
+<%= button_to "New Event", new_event_path, method: :get %>
+
+<br>
 
 <% if user_signed_in? %>
   <%= button_to "edit account", edit_user_registration_path, method: :get  %>

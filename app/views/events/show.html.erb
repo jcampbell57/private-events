@@ -1,0 +1,19 @@
+<%= render @event, partial: 'event' %>
+<p>event creator: <%= link_to @event.creator.username, user_path(id: @event.creator.id) %></p>
+
+<h3>Event Attendees<h1>
+<ul>
+  <% if @event.attendees.any? %>
+    <% @event.attendees.each do |attendee| %>
+      <li><%= attendee.username %></li>
+    <% end %>
+  <% else %>
+    <li>no attendees</li>
+  <% end %>
+</ul>
+
+<% if @event.attendees.include?(current_user) %>
+  <%= button_to 'cancel attendance', event_event_attendee_path(event_id: @event.id, id: current_user.id), method: :delete %>
+<% else %>
+  <%= button_to 'attend event', event_event_attendees_path(event_id: @event.id), method: :post %>
+<% end %>

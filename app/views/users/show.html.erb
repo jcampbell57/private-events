@@ -1,5 +1,19 @@
-<h1> <%= @user.username %>'s Event's </h1>
+<h3> <%= @user.username %>'s Created Event's </h1>
 
 <ul>
   <%= render @user.created_events, partial: '/events/event' %>
+</ul>
+
+<h3> <%= @user.username %>'s Attended Event's </h1>
+
+<h4>Future Events:</h3>
+
+<ul>
+  <%= render @user.attended_events.future %>
+</ul>
+
+<h4>Past Events:</h3>
+
+<ul>
+  <%= render @user.attended_events.past %>
 </ul>

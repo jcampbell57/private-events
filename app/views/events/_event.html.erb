@@ -1,5 +1,1 @@
-<li>
-  <p>date: <%= event.date %></p>
-  <p>location: <%= event.location %></p>  
-  <p>creator: <%= link_to event.creator.username, user_path(id: event.creator.id) %></p>  
-</li>
+<li><%= link_to event.date.to_s + ' - ' + event.location, event%></li>

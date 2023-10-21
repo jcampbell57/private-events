@@ -1,0 +1,14 @@
+<h2>Eventr App</h2>
+
+<p>
+  <%=link_to 'Event Index', root_path%> | 
+
+  <% if user_signed_in? %>
+    <%= link_to "edit account", edit_user_registration_path, method: :get  %> | 
+    <%= link_to "logout", destroy_user_session_path, method: :delete  %>
+  <% else %>
+    <%= link_to "sign in", user_session_path %>
+  <% end %>  
+
+</p>
+

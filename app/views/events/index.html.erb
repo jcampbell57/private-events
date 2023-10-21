@@ -1,16 +1,15 @@
-<h2>Events</h2>
+<h2>Future Events</h2>
 
 <ul>
-  <%= render @events %>
+  <%= render @events.future %>
 </ul>
 
-<%= button_to "New Event", new_event_path, method: :get %>
+<h3>Past Events</h2>
 
-<br>
+<ul>
+  <%= render @events.past %>
+</ul>
 
-<% if user_signed_in? %>
-  <%= button_to "edit account", edit_user_registration_path, method: :get  %>
-  <%= button_to "logout", destroy_user_session_path, method: :delete  %>
-<% else %>
-  <%= button_to "sign in", user_session_path %>
-<% end %>
+  <% if user_signed_in? %>
+    <%= button_to "New Event", new_event_path, method: :get %>
+  <% end %>  
